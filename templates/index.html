@@ -1,0 +1,215 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+{% block body %}
+
+<style>
+  .button {
+    display: inline-block;
+    border-radius: 16px;
+    background-color: #7AFAF1;
+    border: none;
+    color: #010E1C;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    width: 150px;
+    transition: all 1s;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 1s;
+  }
+
+  .button:hover span {
+    padding-right: 10px;
+  }
+
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .footer__btn {
+    color: #343945;
+    float: left;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+    line-height: 35px;
+    margin-top: 20px;
+    position: relative;
+    text-align: center;
+  }
+
+  .footer__btn {
+    float: right;
+    margin-right: 12px;
+    margin-top: -2px;
+    white-space: nowrap;
+  }
+
+</style>
+
+<div class="body" style="background-color:#C5C9DA">
+
+  <div class="container-fluid px-0">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://source.unsplash.com/1600x600/?mask" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="font-size:48px">Face Mask Detector</h5>
+            <p style="font-size:32px">Face mask for the protection of ourselves and others at times like these</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://source.unsplash.com/1600x600/?corona" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="font-size:48px">Safety must be your first</h5>
+            <p style="font-size:32px">One major protection method for people is to follow safety measures in public</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://source.unsplash.com/1600x600/?helmet" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="font-size:48px">Helmet Detector</h5>
+            <p style="font-size:32px">Helmet for the protection of workers at places like construction sites</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <br>
+  <br>
+  <h1 class="my-2 text-center">Welcome to Face Mask and Helmet Detection</h1>
+  <br>
+  <br>
+  <div class="container my-3">
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-2">
+        <p class="col-md-8 fs-4" style="text-align:left;">Face Mask and Helmet Detection is a web application to provide face mask detection
+          for detecting face masks at public places protecting ourselves & others from viruses like covidl 9 and hard
+          hat detection for detecting safety helmets hence ensuring safety of workers at construction sites.</p>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="row align-items-md-stretch">
+      <div class="col-md-6">
+        <div class="h-100 p-5 text-white " style="background-image:url(https://source.unsplash.com/1600x600/?facemask)">
+          <h2>Face Mask Detection</h2>
+          <p>Click on Get Started to use Face Mask Detection feature</p>
+          <li><a class="button" href="/face">Get Started</a></li>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="h-100 p-5 border rounded-3"
+          style="background-image:url(https://source.unsplash.com/1600x600/?helmet)">
+          <h2>Helmet Detection</h2>
+          <p>Click on Get Started to use Helmet Detection feature Lim</p>
+          <li><a class="button" href="/helmet">Get Started</a></li>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+  </div>
+  <footer class="container py-5">
+    <div class="row">
+      <div class="col-12 col-md">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+          stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img"
+          viewBox="0 0 24 24">
+          <title>Product</title>
+          <circle cx="12" cy="12" r="10"></circle>
+          <path
+            d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94">
+          </path>
+        </svg>
+        <small class="d-block mb-3 text-muted">© 2020–2021 Face Mask and Helmet Detection. All Rights Reserved.</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Explore</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary" href="#">Home</a></li>
+          <li><a class="link-secondary" href="/services">Services</a></li>
+          <li><a class="link-secondary" href="/about">About Us</a></li>
+          <li><a class="link-secondary" href="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Features</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary" href="/face">Face Mask Detection</a></li>
+          <li><a class="link-secondary" href="/helmet">Helmet Detection</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary" href="/about">Team</a></li>
+          <li><a class="link-secondary" href="/terms">Overview</a></li>
+          {% comment %} <li><a class="link-secondary" href="/terms">Privacy</a></li> {% endcomment %}
+          <li><a class="link-secondary" href="/terms">Terms</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Business</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary" href="mailto:bhavinpatil56@gamil.com">bhavinpatil56@gmail.com</a></li>
+          <li><a class="link-secondary" href="tel:7558759924">+91-7558759924</a></li>
+          {% comment %} <a href="https://twitter.com/BhavinPatil10" class="fa fa-twitter"></a> {% endcomment %}
+        </ul>
+      </div>
+    </div>
+    <section class="footer__col footer__col--next">
+      <a href="/about" class="footer__btn" data-footer-link="2">
+        <span>Next: About</span>
+
+        <div class="footer__btn-line">
+          <div class="footer__btn-line-inner"></div>
+        </div>
+      </a>
+    </section>
+  </footer>
+
+</div>
+
+{% endblock body %}

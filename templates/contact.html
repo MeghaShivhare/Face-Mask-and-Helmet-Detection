@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Us{% endblock title %}
+{% block body %}
+
+<style>
+.footer__btn {
+    color: #343945;
+    float: left;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+    line-height: 35px;
+    margin-top: 20px;
+    position: relative;
+    text-align: center;
+}
+.footer__btn {
+    float: right;
+    margin-right: 12px;
+    margin-top: -2px;
+    white-space: nowrap;
+}
+</style>
+
+<div style="background-color:#C5C9DA">
+
+        <br>
+<br>
+<div class="container">
+<img src="https://source.unsplash.com/1200x400/?team" class="img-fluid" alt="   ">
+</div>
+
+<div class="container">
+    <br>
+    <h1 class="text-center" style="font-size:48px">Contact Us</h1><br>
+    <br>
+    <br>
+    <br>
+        <div class="contact-clean">
+            <form action="/contact" method="POST">{% csrf_token %}
+                {% comment %} <h2 class="text-center">Contact us</h2> {% endcomment %}
+                    <div class="form-group"><input id="name" name="name" class="form-control" type="text" name="name" placeholder="Name"></div><br>
+                    <div class="form-group"><input id="email" name="email" class="form-control" type="email" name="email" placeholder="Email"></div><br>
+                    <div class="form-group"><input id="phone" name="phone" class="form-control" type="phone" name="phone" placeholder="Phon Number"></div><br>
+                    <div class="form-group"><textarea id="address" name="address" class="form-control" rows="4" name="address" placeholder="Address"></textarea></div><br>
+                    <div class="form-group"><textarea id="message" name="message" class="form-control" rows="10" name="message" placeholder="Message"></textarea></div><br>
+                    <div class="form-group"><button class="btn btn-primary" type="submit" style="font-size: 22px; border-radius:8%">Send </button></div>
+                    <br>
+            </form>
+        </div>
+    {% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script> {% endcomment %}
+</div>
+
+<footer class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24"><title>Product</title><circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path></svg>
+      <small class="d-block mb-3 text-muted">© 2020–2021 Face Mask and Helmet Detection. All Rights Reserved.</small>
+    </div>
+  <section class="footer__col footer__col--next">
+            <a href="/#" class="footer__btn" data-footer-link="2">
+                <span>Back to Home</span>
+                <div class="footer__btn-line">
+                    <div class="footer__btn-line-inner"></div>
+                </div>
+            </a>
+  </section>
+</footer>
+
+</div>
+
+{% endblock body %}

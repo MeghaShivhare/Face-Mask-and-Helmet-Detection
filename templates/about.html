@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+
+{% block title %}About Us{% endblock title %}
+{% block body %}
+
+<style>
+  .footer__btn {
+    color: #343945;
+    float: left;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+    line-height: 35px;
+    margin-top: 20px;
+    position: relative;
+    text-align: center;
+  }
+
+  .footer__btn {
+    float: right;
+    margin-right: 12px;
+    margin-top: -2px;
+    white-space: nowrap;
+  }
+</style>
+<div style="background-color:#C5C9DA">
+
+  <br>
+  <br>
+  <br>
+
+  <div class="container">
+    <img src="https://source.unsplash.com/1200x400/?team" style="margin:28px">
+  </div>
+
+
+  <div class="container">
+    <main class="bd-main order-1">
+      <div class="bd-intro ps-lg-4">
+        <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/bhavinpatil/Face-Mask-and-Helmet-Detection"
+            title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+          <h1 class="bd-title" id="content">Team</h1>
+        </div>
+        <p class="bd-lead">An overview of the founding team and core contributors to Face Mask and Helmet Detector.</p>
+        <script async="" src="https://cdn.carbonads.com/carbon.js?serve=CKYIKKJL&amp;placement=getbootstrapcom"
+          id="_carbonads_js"></script>
+      </div>
+      <div class="bd-content ps-lg-4">
+        <p>Face Mask and Helmet is maintained by the founding team and a small group of invaluable core contributors, with the
+          massive support and involvement of our community.</p>
+        <div class="list-group mb-3">
+          <a class="list-group-item list-group-item-action d-flex align-items-center" href="https://github.com/bhavinpatil">
+            <img src="https://github.com/bhavinpatil.png" alt="@mdo" width="32" height="32" class="rounded me-2"
+              loading="lazy">
+            <span>
+              <strong style="text-color:#FDFEFE">Bhavin Patil</strong>
+            </span>
+          </a>
+        </div> 
+        <div class="list-group mb-3">
+          <a class="list-group-item list-group-item-action d-flex align-items-center" href="https://github.com/MeghaShivhare">
+            <img src="https://github.com/MeghaShivhare.png" alt="@mdo" width="32" height="32" class="rounded me-2"
+              loading="lazy">
+            <span>
+              <strong style="text-color:#FFFFFF">Megha Shivhare</strong>
+            </span>
+          </a>
+        </div>
+        <div class="list-group mb-3">
+          <a class="list-group-item list-group-item-action d-flex align-items-center" href="https://github.com/meghabokade">
+            <img src="https://github.com/meghabokade.png"  alt="@mdo" width="32" height="32" class="rounded me-2"
+              loading="lazy">
+            <span>
+              <strong style="text-color:#FFFFFF">Megha Bokade</strong>
+            </span>
+          </a>
+        </div>
+        <div class="list-group mb-3">
+          <a class="list-group-item list-group-item-action d-flex align-items-center" href="https://github.com/juhiesayyed">
+            <img src="https://github.com/juhiesayyed.png"  alt="@mdo" width="32" height="32" class="rounded me-2"
+              loading="lazy">
+            <span>
+              <strong style="text-color:#FFFFFF">Juhie Sayyed</strong>
+            </span>
+          </a>
+        </div>
+        <p>Get involved with Our Website development by <a
+            href="https://github.com/BHT-TK-001/Balaclava-Detection/issues/new">opening an issue</a> or submitting a
+          pull request. Read our
+          {% comment %} <a href="https://github.com/BHT-TK-001/Balaclava-Detection/commit/"> {% endcomment %}
+            contributing guidelines</a> for information on how we develop.</p>
+      </div>
+    </main>
+  </div>
+
+  <footer class="container py-5">
+    <div class="row">
+      <div class="col-12 col-md">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+          stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img"
+          viewBox="0 0 24 24">
+          <title>Product</title>
+          <circle cx="12" cy="12" r="10"></circle>
+          <path
+            d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94">
+          </path>
+        </svg>
+        <small class="d-block mb-3 text-muted">© 2020–2021 Face Mask and Helmet Detection. All Rights Reserved.</small>
+      </div>
+      <section class="footer__col footer__col--next">
+        <a href="/terms" class="footer__btn" data-footer-link="2">
+          <span>Next: Overviews</span>
+
+          <div class="footer__btn-line">
+            <div class="footer__btn-line-inner"></div>
+          </div>
+        </a>
+      </section>
+  </footer>
+
+</div>
+{% endblock body %}
